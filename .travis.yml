@@ -1,6 +1,8 @@
 language: node_js
+# 指定需要sudo权限
+sudo: required
 node_js:
-  - "7"
+  - "8"
 
 before_install:
   - git config --global push.default matching
@@ -29,9 +31,12 @@ after_success:
   - git commit -m "Travis CI Auto Builder"
   - git push --quiet --force https://github.com/lml2014/lml2014.github.io.git master
 
+# 指定博客源码分支，因人而异。hexo博客源码托管在独立repo则不用设置此项
 branches:
   only:
     - hexo
+
+# 指定缓存模块，可选。缓存可加快编译速度。
 cache:
   directories:
     - node_modules
