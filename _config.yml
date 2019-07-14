@@ -6,14 +6,14 @@
 title: 火中取蛋壳
 subtitle: run stop run stop, go go go.
 description: 个人技术博客，对于一些东西进行总结整理。
-keywords:
+keywords: Java
 author: lml2014
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+# url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -29,7 +29,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :title.md
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -81,3 +81,10 @@ deploy:
   type: git
   repository: github_token@github.com:lml2014/lml2014.github.io.git
   branch: master
+
+# Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
