@@ -16,7 +16,7 @@ git config user.email "982905676@qq.com"
 
 # add commit timestamp
 git add .
-git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
+git commit -m "Auto Update Time at `date +"%Y-%m-%d %H:%M"`"
 
 # Github Pages
 git push --force --quiet "https://${github_token}@${GH_REF}" master:master
