@@ -1,6 +1,11 @@
 ---
-title: Hello World
+title: hello-world
+permalink: hello-world
+tags: [Java]
+date: 2019-07-15 13:53:34
+categories: [Java]
 ---
+
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
 ## Quick Start
