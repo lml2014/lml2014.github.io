@@ -95,17 +95,21 @@
 
 
 
-  <meta name="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="火中取蛋壳">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="标题java.lang.OutOfMemoryError:Java heap space 前言本文翻译自 https://plumbr.io/outofmemoryerror/java-heap-space OverviewJava程序仅仅被使用有限的内存空间。这个空间在程序被启动时指定了。为了让事情更复杂，java内存被分割成2个区域。这些区域被称为堆空间和永久代(用于永久代) 这些区域的大小被">
+<meta name="keywords" content="Java,OOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OOM-heap space">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/OOM-heap space/index.html">
 <meta property="og:site_name" content="火中取蛋壳">
-<meta property="og:description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+<meta property="og:description" content="标题java.lang.OutOfMemoryError:Java heap space 前言本文翻译自 https://plumbr.io/outofmemoryerror/java-heap-space OverviewJava程序仅仅被使用有限的内存空间。这个空间在程序被启动时指定了。为了让事情更复杂，java内存被分割成2个区域。这些区域被称为堆空间和永久代(用于永久代) 这些区域的大小被">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://plumbr.io/wp-content/uploads/2014/04/java-lang-outofmemoryerror-java-heap-space.png">
+<meta property="og:image" content="https://plumbr.io/wp-content/uploads/2015/08/outofmemoryerror-analyzed.png">
+<meta property="og:updated_time" content="2019-07-15T13:08:24.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="火中取蛋壳">
-<meta name="twitter:description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+<meta name="twitter:title" content="OOM-heap space">
+<meta name="twitter:description" content="标题java.lang.OutOfMemoryError:Java heap space 前言本文翻译自 https://plumbr.io/outofmemoryerror/java-heap-space OverviewJava程序仅仅被使用有限的内存空间。这个空间在程序被启动时指定了。为了让事情更复杂，java内存被分割成2个区域。这些区域被称为堆空间和永久代(用于永久代) 这些区域的大小被">
+<meta name="twitter:image" content="https://plumbr.io/wp-content/uploads/2014/04/java-lang-outofmemoryerror-java-heap-space.png">
 
 
 
@@ -113,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/2019/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/OOM-heap space/">
 
 
 
@@ -123,7 +127,7 @@
   };
 </script>
 
-  <title>归档 | 火中取蛋壳</title>
+  <title>OOM-heap space | 火中取蛋壳</title>
   
 
 
@@ -171,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
      <a href="https://github.com/lml2014" class="github-corner" aria-label="View source on GitHub" target="_blank">
@@ -270,7 +274,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -315,28 +319,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -378,463 +360,287 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/OOM-heap space/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lml2014">
+      <meta itemprop="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火中取蛋壳">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">OOM-heap space
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 12 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+          
 
-        
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              
+                
+              
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-GC Overhead Limit Exceeded/" itemprop="url">
+              <time title="创建时间：2019-07-15 20:03:36 / 修改时间：13:08:24" itemprop="dateCreated datePublished" datetime="2019-07-15T20:03:36+00:00">2019-07-15</time>
+            </span>
+          
+
+          
             
-              <span itemprop="name">OOM-GC Overhead Limit Exceeded</span>
+
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:55:05+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OOM/" itemprop="url" rel="index"><span itemprop="name">OOM</span></a></span>
 
-    </header>
-  </article>
+                
+                
+              
+            </span>
+          
 
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">4.4k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">4 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>java.lang.OutOfMemoryError:Java heap space</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文翻译自 <a href="https://plumbr.io/outofmemoryerror/java-heap-space" target="_blank" rel="noopener">https://plumbr.io/outofmemoryerror/java-heap-space</a></p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Java程序仅仅被使用有限的内存空间。这个空间在程序被启动时指定了。为了让事情更复杂，java内存被分割成2个区域。这些区域被称为堆空间和永久代(用于永久代)<br><img src="https://plumbr.io/wp-content/uploads/2014/04/java-lang-outofmemoryerror-java-heap-space.png" alt="head space"></p>
+<p>这些区域的大小被设置了在JVM启动时，并且能够通过JVM参数-<strong>Xmx</strong>和-<strong>XX:MaxPermSize</strong>定制。如果没有明确指定这些值，那么将使用平台特有的默认值。</p>
+<p><code>java.lang.OutOfMemoryError: Java heap space error</code>将会被触发，<strong>当应用程序试图添加更多的数据放进堆空间区域，但没有足够的空间给它</strong>。</p>
+<blockquote>
+<p>when the application attempts to add more data into the heap space area, but there is not enough room for it</p>
+</blockquote>
+<p>注意可能有很多可用的物理内存，但是每当JVM到达堆大小的限制时，都会抛出异常<code>java.lang.OutOfMemoryError: Java heap space error</code></p>
+<h2 id="What-is-causing-it"><a href="#What-is-causing-it" class="headerlink" title="What is causing it?"></a>What is causing it?</h2><p>抛出<code>java.lang.OutOfMemoryError: Java heap space error</code>大多数时候原因都是很简单的–你尝试去将XXL大小的应用程序装入S大小的堆空间。意思就是–应用程序需要更多堆空间去正常运作。还有其他导致OutOfMemoryError错误信息的原因更复杂并且由于程序错误：</p>
+<ul>
+<li><strong>使用/数据的容量峰值</strong> 应用程序被设计为处理一定量的用户或特定数量的数据，当用户或数据的数量突然暴涨并且穿过预期阈值。那么这些正常程序在峰值操作时就会导致触发<code>java.lang.OutOfMemoryError: Java heap space error</code></li>
+<li><strong>内存泄漏</strong> 特定类型的编程错误会导致你的应用程序不断消耗更多的内存，每一次这个泄漏内存的功能被使用就会导致更多的内存对象进入到堆空间中。随着时间推移，泄漏的对象占用所有可用的Java堆空间并且会触发常见的错误<code>java.lang.OutOfMemoryError: Java heap space</code>错误。</li>
+</ul>
+<h2 id="Give-me-an-example"><a href="#Give-me-an-example" class="headerlink" title="Give me an example"></a>Give me an example</h2><ul>
+<li><p>普通的例子<br>第一个例子是一个真实的例子–以下的java代码尝试去分配2M的Integer数组。当你完成它并且使用12M大小的java堆内存（java -Xmx12m OOM）启动时，它将会抛出错误<code>java.lang.OutOfMemoryError: Java heap space</code>，使用13M的java堆内存就会运行的很好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class OOM &#123;</span><br><span class="line">  static final int SIZE=2*1024*1024;</span><br><span class="line">  public static void main(String[] a) &#123;</span><br><span class="line">    int[] i = new int[SIZE];</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内存泄漏的例子<br>第二个例子是一个更常见的内存泄漏的例子。在java中，当开发者创建和使用新对象时，例如<em>new Integer(5)</em>，他们并不需要关心是否分配了内存–JVM会处理它们。在应用程序的整个声明周期，JVM会定期检查哪些对象的内存正在被使用哪些不再使用了。不再使用的内存会被发现，并且内存会回收它再次利用，这个过程就叫做垃圾收集。在JVM收集中这个相对应的模版就叫做垃圾收集器（GC）.</p>
+</li>
+</ul>
+<p>Java的自动内存管理依赖于GC定期查找未使用的对象并将它们删除，简单点说，<strong>内存泄漏在java中的场景就是当一些对象不再被应用使用了但是GC却无法识别回收他们</strong>。由于这些未使用的对象无限期的停留在堆空间，最后就导致了抛出异常：java.lang.OutOfMemoryError: Java heap space error.</p>
+<p>以下就构建了一个内存泄漏的例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class KeylessEntry &#123;</span><br><span class="line"> </span><br><span class="line">   static class Key &#123;</span><br><span class="line">      Integer id;</span><br><span class="line"> </span><br><span class="line">      Key(Integer id) &#123;</span><br><span class="line">         this.id = id;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      @Override</span><br><span class="line">      public int hashCode() &#123;</span><br><span class="line">         return id.hashCode();</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      Map m = new HashMap();</span><br><span class="line">      while (true)</span><br><span class="line">         for (int i = 0; i &lt; 10000; i++)</span><br><span class="line">            if (!m.containsKey(new Key(i)))</span><br><span class="line">               m.put(new Key(i), &quot;Number:&quot; + i);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当你运行上面的代码时候，你可能期望他永远没有任何问题。假如这个缓存解决方案仅仅将Map夸大到10000元素，那么所有的key都将被保存于hashMap中。然而现实中，这些key都将会加入到缓存中，这个类没有合适的equals()实现在hashCode()之后。</p>
+<p>因此，随着时间的推移，这些含有内存泄漏的代码不断缓存结果最终就会消耗大量的java堆空间了。当这些泄漏的内存填充满了可用的堆空间并且GC无法清理它的时候，就会抛出异java.lang.OutOfMemoryError: Java heap space</p>
+<p>解决方案很简单–实现equals()方法类似于下面这种，那么程序会很顺利的。但在找到这些原因之前，你需要浪费大量的脑细胞了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public boolean equals(Object o) &#123;</span><br><span class="line">   boolean response = false;</span><br><span class="line">   if (o instanceof Key) &#123;</span><br><span class="line">      response = (((Key)o).id).equals(this.id);</span><br><span class="line">   &#125;</span><br><span class="line">   return response;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="What-is-the-solution"><a href="#What-is-the-solution" class="headerlink" title="What is the solution?"></a>What is the solution?</h2><p>有时候，你向JVM申请的内存数量是不够容纳你的应用所需要的。这种情况下，你应该分配更多的内存空间–看文章最后了解如何实现它。</p>
+<p>然后在许多场景中，提供更多的内存空间将不会解决这个问题。例如，如果你的应用程序包含了内存泄漏，添加更多的内存空间仅仅会延长java.lang.OutOfMemoryError: Java heap space错误的抛出。增加Java堆空间的数量也会增加GC暂停影响您的应用程序的吞吐量或延迟的长度。</p>
+<p>如果你想要根本的解决java堆问题而不是掩盖这个问题，你需要找出你的代码那一部分分配了最多的内存。换句话说，你需要回到如下问题：</p>
+<ol>
+<li>哪个对象占据了最大的内存空间？</li>
+<li>这些对象在源代码中哪里被分配了？</li>
+</ol>
+<p>为了解决这些问题，你需要留个自己一些充足的时间（–看一看下面项目构建的列表）。这是一个解决问题的大纲，可以帮你解决这个问题。</p>
+<ul>
+<li>获取到安全许可为了得到你的JVM中的堆空间dump文件。“Dumps”是堆空间的快照包含了你需要分析的内容。这些快照包含了机密信息，例如密码，卡号等等。因此你需要安全许可才能得到dump文件。</li>
+<li>在适当的时候获取dump文件。在你获取一些dump文件时，如果是在错误的时间上，你将会获取一堆的噪音文件，几乎毫无用处。另一方面，每次获取dump文件时JVM可能完全的处于冻结状态，因此不要过多的获取这些dump文件不然你的用户将会面临性能问题。</li>
+<li>找到可以加载dump文件的机器。当你的JVM需要排查8G以上的堆文件时，你需要超过8G以上内存的机器才能去分析堆内容。使用dump分析文件去分析（我们推荐Eclipse MAT，但也有其他更好的替代品）</li>
+<li>检测堆中的最大消费者的GC根的路径。这里有篇<a href="https://plumbr.io/blog/memory-leaks/solving-outofmemoryerror-dump-is-not-a-waste" target="_blank" rel="noopener">文章</a>来介绍如何处理.这是对初学者来说特别艰难，但实际上会让你了解结构和导航。</li>
+<li>接下来，您需要找出源代码中的潜在危险大量对象被分配。如果你有好的应用程序源代码知识你可以做这几个搜索。</li>
+</ul>
+<p>或者，我们推荐<a href="https://plumbr.io/" target="_blank" rel="noopener">Plumbr, the only Java monitoring solution with automatic root cause detection</a>。在其他的性能问题中，它也会一并捕获所有的java错误，并自动向你呈现这些信息，这些信息都是关于内存饥饿的数据结构。</p>
+<p>Plumbr负责收集必要的数据在后台–这包括有关堆使用情况的相关数据（只有对象布局图，没有实际的数据）。同时也包含了一些你不能找到的java的堆数据。它也对这些数据做了必要处理–当JVM发生java.lang.OutOfMemoryError错误时。以下是一个Plumbr分析的附带的java.lang.OutOfMemoryError例子。</p>
+<p><img src="https://plumbr.io/wp-content/uploads/2015/08/outofmemoryerror-analyzed.png" alt="outofmemeoryerror-analyzed"></p>
+<p>无需任何工具的情况下，你可以看到：</p>
+<ul>
+<li>那个对象消费了大量的内存（271个com.example.map.impl.PartitionContainer实例消费了总248MB内存中的173MB）</li>
+<li>这些对象被分配在了哪里（大多数的对象被分配在了MetricManagerImpl当中，line 304）</li>
+<li>哪些是当前对象完整的引用（完整的引用链GC根）</li>
+</ul>
+<p>配备此信息，您可以缩放到根本原因，并确保数据结构调整到正常水平，在这里他们会非常适合你的内存池。</p>
+<p>但是，当你从内存分析或从阅读Plumbr报告得出的结论是，内存使用是合法的，源代码没有任何问题，那么您需要允许JVM更多Java堆空间才能正常运行。在这种情况下，改变您的JVM启动配置和添加(或增加价值如果存在)如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Xmx1024m</span><br></pre></td></tr></table></figure>
+
+<p>上面的配置将使Java堆空间的1024MB的应用。您可以使用g或G GB、m或M MB，k或K为KB。例如以下所有的都是等于说，最大的堆空间是1GB：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1073741824 com.mycompany.MyClass</span><br><span class="line">java -Xmx1048576k com.mycompany.MyClass</span><br><span class="line">java -Xmx1024m com.mycompany.MyClass</span><br><span class="line">java -Xmx1g com.mycompany.MyClass</span><br></pre></td></tr></table></figure>
 
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Requested array siz/" itemprop="url">
-            
-              <span itemprop="name">OOM-Requested array siz</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:53:17+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Permgen space/" itemprop="url">
-            
-              <span itemprop="name">OOM-Permgen space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:52:01+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Out of swap space/" itemprop="url">
-            
-              <span itemprop="name">OOM-Out of swap space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:50:41+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-new native thread/" itemprop="url">
-            
-              <span itemprop="name">OOM-new native thread</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:49:14+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-All/" itemprop="url">
-            
-              <span itemprop="name">OOM-All</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:47:48+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Metaspace/" itemprop="url">
-            
-              <span itemprop="name">OOM-Metaspace</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:45:30+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Kill process/" itemprop="url">
-            
-              <span itemprop="name">OOM-Kill process</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:08:33+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-heap space/" itemprop="url">
-            
-              <span itemprop="name">OOM-heap space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:03:36+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-GC overhead/" itemprop="url">
-            
-              <span itemprop="name">OOM-GC overhead</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T19:46:46+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/Hexo计划/" itemprop="url">
-            
-              <span itemprop="name">Hexo计划</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T19:30:44+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/01/hello-world/" itemprop="url">
-            
-              <span itemprop="name">hello-world</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-01T13:53:34+00:00" content="2019-07-01">
-          07-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/OOM/" rel="tag"># OOM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/15/OOM-GC overhead/" rel="next" title="OOM-GC overhead">
+                <i class="fa fa-chevron-left"></i> OOM-GC overhead
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/OOM-Kill process/" rel="prev" title="OOM-Kill process">
+                OOM-Kill process <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -854,8 +660,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -937,6 +752,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">3.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-causing-it"><span class="nav-number">4.</span> <span class="nav-text">What is causing it?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Give-me-an-example"><span class="nav-number">5.</span> <span class="nav-text">Give me an example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-the-solution"><span class="nav-number">6.</span> <span class="nav-text">What is the solution?</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1082,6 +914,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1095,6 +931,8 @@
 
   
 
+
+  
 
 
   

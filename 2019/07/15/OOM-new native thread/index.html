@@ -95,18 +95,20 @@
 
 
 
-  <meta name="description" content="this a java files.">
-<meta name="keywords" content="Java">
+  <meta name="description" content="标题java.lang.OutOfMemoryError:Unable to create new native thread 前言本文翻译自 https://plumbr.io/outofmemoryerror/unable-to-create-new-native-thread Overviewjava应用程序天生就是多线程的。这个意思就是说用java编写的程序看起来同一时刻可以做好几个事情。">
+<meta name="keywords" content="Java,OOM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaContent">
-<meta property="og:url" content="http://yoursite.com/2019/07/15/JavaContent/index.html">
+<meta property="og:title" content="OOM-new native thread">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/OOM-new native thread/index.html">
 <meta property="og:site_name" content="火中取蛋壳">
-<meta property="og:description" content="this a java files.">
+<meta property="og:description" content="标题java.lang.OutOfMemoryError:Unable to create new native thread 前言本文翻译自 https://plumbr.io/outofmemoryerror/unable-to-create-new-native-thread Overviewjava应用程序天生就是多线程的。这个意思就是说用java编写的程序看起来同一时刻可以做好几个事情。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-15T10:41:54.084Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/15/OOM-new%20native%20thread/unable-to-create-new-thead.png">
+<meta property="og:updated_time" content="2019-07-15T13:08:24.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaContent">
-<meta name="twitter:description" content="this a java files.">
+<meta name="twitter:title" content="OOM-new native thread">
+<meta name="twitter:description" content="标题java.lang.OutOfMemoryError:Unable to create new native thread 前言本文翻译自 https://plumbr.io/outofmemoryerror/unable-to-create-new-native-thread Overviewjava应用程序天生就是多线程的。这个意思就是说用java编写的程序看起来同一时刻可以做好几个事情。">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/15/OOM-new%20native%20thread/unable-to-create-new-thead.png">
 
 
 
@@ -114,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/15/JavaContent/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/OOM-new native thread/">
 
 
 
@@ -124,7 +126,7 @@
   };
 </script>
 
-  <title>JavaContent | 火中取蛋壳</title>
+  <title>OOM-new native thread | 火中取蛋壳</title>
   
 
 
@@ -373,11 +375,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/JavaContent/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/OOM-new native thread/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lml2014">
-      <meta itemprop="description" content="个人技术博客，对于一些东西进行总结整理。">
+      <meta itemprop="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -390,7 +392,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaContent
+          <h1 class="post-title" itemprop="name headline">OOM-new native thread
 
               
             
@@ -416,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2019-07-15 16:30:59 / 修改时间：10:41:54" itemprop="dateCreated datePublished" datetime="2019-07-15T16:30:59+00:00">2019-07-15</time>
+              <time title="创建时间：2019-07-15 20:49:14 / 修改时间：13:08:24" itemprop="dateCreated datePublished" datetime="2019-07-15T20:49:14+00:00">2019-07-15</time>
             </span>
           
 
@@ -435,7 +437,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OOM/" itemprop="url" rel="index"><span itemprop="name">OOM</span></a></span>
 
                 
                 
@@ -464,7 +466,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">19</span>
+              <span title="本文字数">2.3k</span>
             </span>
           
 
@@ -476,7 +478,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span title="阅读时长">2 分钟</span>
             </span>
           
 
@@ -495,7 +497,39 @@
       
 
       
-        <p>this a java files.</p>
+        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>java.lang.OutOfMemoryError:Unable to create new native thread</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文翻译自 <a href="https://plumbr.io/outofmemoryerror/unable-to-create-new-native-thread" target="_blank" rel="noopener">https://plumbr.io/outofmemoryerror/unable-to-create-new-native-thread</a></p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>java应用程序天生就是多线程的。这个意思就是说用java编写的程序看起来同一时刻可以做好几个事情。例如–即时只有在一个处理器上–当你从一个窗口内容拖动到另一个时，后台的音乐播放并没有停止，因为你可以在此时执行好几个操作。</p>
+<p>一个思考线程的方式是你把它当做工人给他们任务去执行。当你只有一个工人的时候，他只能去做一个任务。但当你有很多工人时，他们可以同时完成几个命令。</p>
+<p>现在，正如现实世界的工人一样，JVM的线程需要一些空间去执行这些他们被分配处理的工作。当这里更多的线程超过了他们在内存的空间时，我们就产生了一个基础的问题：</p>
+<p><img src="unable-to-create-new-thead.png" alt="new-native-thead"></p>
+<p>错误信息<em>java.lang.OutOfMemoryError: Unable to create new native thread</em>意思是<strong>Java应用程序已达到它能启动多少线程的限制。</strong></p>
+<blockquote>
+<p>Java application has hit the limit of how many Threads it can launch</p>
+</blockquote>
+<h2 id="What-is-causing-it"><a href="#What-is-causing-it" class="headerlink" title="What is causing it?"></a>What is causing it?</h2><p>当JVM要求一个OS提供一个新线程的时候，你有一个机会去展示这个错误<em>java.lang.OutOfMemoryError: Unable to create new native thread</em>.只要底层的OS无法分配一个新的线程，那么就将会引发OutOfMemoryError的抛出。本地线程的限制是十分依赖于平台的。因此我们建议可以通过运行以下的测试例子来测试。但是，一般来说，<em>java.lang.OutOfMemoryError: Unable to create new native thread</em>抛出的情况会经过以下这几个阶段：</p>
+<ol>
+<li>在JVM中当应用程序申请一个新的java线程。</li>
+<li>JVM本地代码代理了这个请求在OS操作系统上去创建一个新的线程。</li>
+<li>OS操作系统尝试创建一个新的线程，这需要内存分配给线程。</li>
+<li>因为32位Java进程耗尽了它的内存地址空间大小，操作系统会拒绝任何本机内存分配。–（2-4）GB进程大小被击中–操作系统的虚拟内存已完全耗尽。</li>
+<li><em>java.lang.OutOfMemoryError: Unable to create new native thread error</em>此时就会抛出。</li>
+</ol>
+<h2 id="Give-me-an-example"><a href="#Give-me-an-example" class="headerlink" title="Give me an example"></a>Give me an example</h2><p>以下代码创建并且开启线程在循环中。当运行这个代码的时候，操作系统会限制的非常快，并且<em>java.lang.OutOfMemoryError: Unable to create new native thread message</em>将会展示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">while(true)&#123;</span><br><span class="line">    new Thread(new Runnable()&#123;</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                Thread.sleep(10000000);</span><br><span class="line">            &#125; catch(InterruptedException e) &#123; &#125;        </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个精确的线程限制是依赖于平台的，例如在Windows,Linux和Mac OS X呈现：</p>
+<ul>
+<li>64-bit Mac OS X 10.9,Java 1.7.0_45-JVM在创建了#2031线程之后挂了</li>
+<li>64-bit Ubuntu Linux, Java 1.7.0_45-JVM在创建了#31893线程之后挂了 </li>
+<li>64-bit Windows 7, Java 1.7.0_45-由于由操作系统使用不同的线程模型,似乎没有引发此错误在这个特殊的平台。在线程是@250000进程之后仍然存活，即使交换文件已增加到10GB，该应用程序正面临极端性能问题。</li>
+</ul>
+<p>所以确保你知道的机器极限可以通过调用一个小的测试，然后找出什么时候将会触发<em>java.lang.OutOfMemoryError: Unable to create new native thread</em>错误。</p>
+<h2 id="What-is-solution"><a href="#What-is-solution" class="headerlink" title="What is solution?"></a>What is solution?</h2><p>偶尔你可以绕过这个限制通过增加OS的限制。例如，如果你已经限制了程序的数量。JVM可以在用户空间引发这个检查，并且这个限制还会增大：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@dev ~]# ulimit -a</span><br><span class="line">core file size          (blocks, -c) 0</span><br><span class="line">--- cut for brevity ---</span><br><span class="line">max user processes              (-u) 1800</span><br></pre></td></tr></table></figure>
+
+<p>通常来说不会的，程序错误时OoutOfMemoryError将会表明新的线程无法创建。当在您的应用程序中生成成千上万的线程时，那么有些东西已经发生了可怕的错误–这里将不会有很多应用程序受益于这样一个巨大的线程的数量。</p>
+<p>解决这个问题的一个方法是开启一个任务线程去dumps这些东西，并去了解这个和场景。这通常需要花费部分时间。</p>
 
       
     </div>
@@ -528,6 +562,8 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
+            <a href="/tags/OOM/" rel="tag"># OOM</a>
+          
         </div>
       
 
@@ -539,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/14/2019文章/" rel="next" title="2019文章">
-                <i class="fa fa-chevron-left"></i> 2019文章
+              <a href="/2019/07/15/OOM-All/" rel="next" title="OOM-All">
+                <i class="fa fa-chevron-left"></i> OOM-All
               </a>
             
           </div>
@@ -548,6 +584,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/OOM-Out of swap space/" rel="prev" title="OOM-Out of swap space">
+                OOM-Out of swap space <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -591,13 +631,22 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">lml2014</p>
-              <div class="site-description motion-element" itemprop="description">个人技术博客，对于一些东西进行总结整理。</div>
+              <div class="site-description motion-element" itemprop="description">个人技术博客，对于一些东西进行总结归纳整理。</div>
           </div>
 
           
@@ -607,7 +656,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -649,7 +698,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -672,6 +723,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">3.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-causing-it"><span class="nav-number">4.</span> <span class="nav-text">What is causing it?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Give-me-an-example"><span class="nav-number">5.</span> <span class="nav-text">Give me an example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-solution"><span class="nav-number">6.</span> <span class="nav-text">What is solution?</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -708,7 +776,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">26k</span>
   
 
   
@@ -719,7 +787,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">24 分钟</span>
   
 </div>
 

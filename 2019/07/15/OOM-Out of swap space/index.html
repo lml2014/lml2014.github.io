@@ -95,17 +95,20 @@
 
 
 
-  <meta name="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="火中取蛋壳">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="标题java.lang.OutOfMemoryError:Out of swap space? 前言本文翻译自 https://plumbr.io/outofmemoryerror/out-of-swap-space java应用程序在启动时，就被限制使用一定量的内存。这个限制是通过几个指定的参数-Xmx和其他类似的启动的参数。在另一种场景中，JVM所要求的总内存大于可用的物理内存，操作系统启动时">
+<meta name="keywords" content="Java,OOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OOM-Out of swap space">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/OOM-Out of swap space/index.html">
 <meta property="og:site_name" content="火中取蛋壳">
-<meta property="og:description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+<meta property="og:description" content="标题java.lang.OutOfMemoryError:Out of swap space? 前言本文翻译自 https://plumbr.io/outofmemoryerror/out-of-swap-space java应用程序在启动时，就被限制使用一定量的内存。这个限制是通过几个指定的参数-Xmx和其他类似的启动的参数。在另一种场景中，JVM所要求的总内存大于可用的物理内存，操作系统启动时">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/07/15/OOM-Out%20of%20swap%20space/out-of-swap-space.png">
+<meta property="og:updated_time" content="2019-07-15T13:08:24.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="火中取蛋壳">
-<meta name="twitter:description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+<meta name="twitter:title" content="OOM-Out of swap space">
+<meta name="twitter:description" content="标题java.lang.OutOfMemoryError:Out of swap space? 前言本文翻译自 https://plumbr.io/outofmemoryerror/out-of-swap-space java应用程序在启动时，就被限制使用一定量的内存。这个限制是通过几个指定的参数-Xmx和其他类似的启动的参数。在另一种场景中，JVM所要求的总内存大于可用的物理内存，操作系统启动时">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/15/OOM-Out%20of%20swap%20space/out-of-swap-space.png">
 
 
 
@@ -113,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/2019/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/OOM-Out of swap space/">
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>归档 | 火中取蛋壳</title>
+  <title>OOM-Out of swap space | 火中取蛋壳</title>
   
 
 
@@ -171,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
      <a href="https://github.com/lml2014" class="github-corner" aria-label="View source on GitHub" target="_blank">
@@ -270,7 +273,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -315,28 +318,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -378,463 +359,245 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/OOM-Out of swap space/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lml2014">
+      <meta itemprop="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火中取蛋壳">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">OOM-Out of swap space
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 12 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+          
 
-        
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              
+                
+              
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-GC Overhead Limit Exceeded/" itemprop="url">
+              <time title="创建时间：2019-07-15 20:50:41 / 修改时间：13:08:24" itemprop="dateCreated datePublished" datetime="2019-07-15T20:50:41+00:00">2019-07-15</time>
+            </span>
+          
+
+          
             
-              <span itemprop="name">OOM-GC Overhead Limit Exceeded</span>
+
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:55:05+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OOM/" itemprop="url" rel="index"><span itemprop="name">OOM</span></a></span>
 
-    </header>
-  </article>
+                
+                
+              
+            </span>
+          
 
+          
+            
+            
+          
 
+          
+          
+
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.2k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Requested array siz/" itemprop="url">
-            
-              <span itemprop="name">OOM-Requested array siz</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:53:17+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>java.lang.OutOfMemoryError:Out of swap space?</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文翻译自 <a href="https://plumbr.io/outofmemoryerror/out-of-swap-space" target="_blank" rel="noopener">https://plumbr.io/outofmemoryerror/out-of-swap-space</a></p>
+<p>java应用程序在启动时，就被限制使用一定量的内存。这个限制是通过几个指定的参数-Xmx和其他类似的启动的参数。在另一种场景中，JVM所要求的总内存大于可用的物理内存，操作系统启动时将替换硬盘内容到内存。</p>
+<p><img src="out-of-swap-space.png" alt="out-of-swap-space"></p>
+<p>错误<em>java.lang.OutOfMemoryError: Out of swap space</em>表明交换空间也耗尽，由于缺乏物理内存和交换空间的新尝试分配失败。</p>
+<h2 id="What-is-causing-it"><a href="#What-is-causing-it" class="headerlink" title="What is causing it?"></a>What is causing it?</h2><p>错误<em>java.lang.OutOfmemoryError: Out of swap space</em>将会被抛出，当JVM在堆中的字节分配失败时，并且本地的堆将会耗尽。这个信息表明了分配的大小（bytes大小）是失败的，并且是由于内存请求的原因。</p>
+<p>这个问题发生在这种场景就是Java进程已经开始了交换，但是java垃圾收集的回收并不在一个不合适的场景。现在的GC算法并不是很好，但当面对延迟所引起的问题交换，GC中断倾向于增大这个级别，这个级别是大多数的应用程序所不能容忍的。</p>
+<p>错误<em>java.lang.OutOfMemoryError: Out of swap space</em>经常有操作系统级别的错误导致，例如：</p>
+<ul>
+<li>操作系统配置了一个不足的swap空间。</li>
+<li>操作系统的其他程序消耗了所有的内存资源。</li>
+</ul>
+<p>有时候也可能是应用程序的错误归因于本地泄漏，例如，应用程序不断的申请内存但是缺不释放这个操作系统的内存。</p>
+<h2 id="What-is-the-solution"><a href="#What-is-the-solution" class="headerlink" title="What is the solution?"></a>What is the solution?</h2><p>为了克服这个问题，你有一下几种方式。最简单和最常用的方式就是去增大swap空间。这意味是平台相关的。例如，在Linux上，你可以输入以下几个命令，创建并且达到一个新的640MB的swapfile。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a </span><br><span class="line">dd if=/dev/zero of=swapfile bs=1024 count=655360</span><br><span class="line">mkswap swapfile</span><br><span class="line">swapon swapfile</span><br></pre></td></tr></table></figure>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Permgen space/" itemprop="url">
-            
-              <span itemprop="name">OOM-Permgen space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:52:01+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>你应该晓得，由于垃圾收集器清扫内存内容，这使得一般的Java进程的交换不可用。运行中的垃圾收起算法在交换分配区能够增加这个GC暂定好几个数量级，因此，你应该多思考下是否使用最简单的办法处理这种情况。</p>
+<p>如果您的应用程序部署的旁边有”吵闹的邻居”，即需要JVM去争夺资源，你应该隔离这些服务分离(虚拟)的机器。</p>
+<p>然而在大多数情况下，你唯一真正可行的选择是要么机器升级到包含更多的内存或优化应用程序以减少内存占用。当你转向优化这条路时，一个开始的好方法是使用内存转储分析器来检测分配的内存。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Out of swap space/" itemprop="url">
-            
-              <span itemprop="name">OOM-Out of swap space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:50:41+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-new native thread/" itemprop="url">
-            
-              <span itemprop="name">OOM-new native thread</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:49:14+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-All/" itemprop="url">
-            
-              <span itemprop="name">OOM-All</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:47:48+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Metaspace/" itemprop="url">
-            
-              <span itemprop="name">OOM-Metaspace</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:45:30+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Kill process/" itemprop="url">
-            
-              <span itemprop="name">OOM-Kill process</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:08:33+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-heap space/" itemprop="url">
-            
-              <span itemprop="name">OOM-heap space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:03:36+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-GC overhead/" itemprop="url">
-            
-              <span itemprop="name">OOM-GC overhead</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T19:46:46+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/Hexo计划/" itemprop="url">
-            
-              <span itemprop="name">Hexo计划</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T19:30:44+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/01/hello-world/" itemprop="url">
-            
-              <span itemprop="name">hello-world</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-01T13:53:34+00:00" content="2019-07-01">
-          07-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/OOM/" rel="tag"># OOM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/15/OOM-new native thread/" rel="next" title="OOM-new native thread">
+                <i class="fa fa-chevron-left"></i> OOM-new native thread
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/OOM-Permgen space/" rel="prev" title="OOM-Permgen space">
+                OOM-Permgen space <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -854,8 +617,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -937,6 +709,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-causing-it"><span class="nav-number">3.</span> <span class="nav-text">What is causing it?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-the-solution"><span class="nav-number">4.</span> <span class="nav-text">What is the solution?</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1082,6 +871,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1095,6 +888,8 @@
 
   
 
+
+  
 
 
   

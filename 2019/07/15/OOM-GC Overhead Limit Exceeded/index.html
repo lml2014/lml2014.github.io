@@ -95,17 +95,18 @@
 
 
 
-  <meta name="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="火中取蛋壳">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="标题OutOfMemoryError: GC Overhead Limit Exceeded 前言本文翻译自 http://www.baeldung.com/java-gc-overhead-limit-exceeded  正文 概述当对象不再被使用时，JVM会小心地释放它所占用的内存，这个进行被叫做Garbage Collection（GC）。异常GC Overhead Limit Exceed">
+<meta name="keywords" content="Java,OOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OOM-GC Overhead Limit Exceeded">
+<meta property="og:url" content="http://yoursite.com/2019/07/15/OOM-GC Overhead Limit Exceeded/index.html">
 <meta property="og:site_name" content="火中取蛋壳">
-<meta property="og:description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+<meta property="og:description" content="标题OutOfMemoryError: GC Overhead Limit Exceeded 前言本文翻译自 http://www.baeldung.com/java-gc-overhead-limit-exceeded  正文 概述当对象不再被使用时，JVM会小心地释放它所占用的内存，这个进行被叫做Garbage Collection（GC）。异常GC Overhead Limit Exceed">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-15T13:08:24.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="火中取蛋壳">
-<meta name="twitter:description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+<meta name="twitter:title" content="OOM-GC Overhead Limit Exceeded">
+<meta name="twitter:description" content="标题OutOfMemoryError: GC Overhead Limit Exceeded 前言本文翻译自 http://www.baeldung.com/java-gc-overhead-limit-exceeded  正文 概述当对象不再被使用时，JVM会小心地释放它所占用的内存，这个进行被叫做Garbage Collection（GC）。异常GC Overhead Limit Exceed">
 
 
 
@@ -113,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/2019/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/15/OOM-GC Overhead Limit Exceeded/">
 
 
 
@@ -123,7 +124,7 @@
   };
 </script>
 
-  <title>归档 | 火中取蛋壳</title>
+  <title>OOM-GC Overhead Limit Exceeded | 火中取蛋壳</title>
   
 
 
@@ -171,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
      <a href="https://github.com/lml2014" class="github-corner" aria-label="View source on GitHub" target="_blank">
@@ -270,7 +271,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -315,28 +316,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -378,463 +357,248 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/OOM-GC Overhead Limit Exceeded/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lml2014">
+      <meta itemprop="description" content="个人技术博客，对于一些东西进行总结归纳整理。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="火中取蛋壳">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">OOM-GC Overhead Limit Exceeded
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 12 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+          
 
-        
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              
+                
+              
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-GC Overhead Limit Exceeded/" itemprop="url">
+              <time title="创建时间：2019-07-15 20:55:05 / 修改时间：13:08:24" itemprop="dateCreated datePublished" datetime="2019-07-15T20:55:05+00:00">2019-07-15</time>
+            </span>
+          
+
+          
             
-              <span itemprop="name">OOM-GC Overhead Limit Exceeded</span>
+
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:55:05+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OOM/" itemprop="url" rel="index"><span itemprop="name">OOM</span></a></span>
 
-    </header>
-  </article>
+                
+                
+              
+            </span>
+          
 
+          
+            
+            
+          
 
+          
+          
+
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">2.1k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Requested array siz/" itemprop="url">
-            
-              <span itemprop="name">OOM-Requested array siz</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:53:17+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>OutOfMemoryError: GC Overhead Limit Exceeded</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文翻译自 <a href="http://www.baeldung.com/java-gc-overhead-limit-exceeded" target="_blank" rel="noopener">http://www.baeldung.com/java-gc-overhead-limit-exceeded</a> </p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
+<li>概述<br>当对象不再被使用时，JVM会小心地释放它所占用的内存，这个进行被叫做Garbage Collection（GC）。<br>异常<code>GC Overhead Limit Exceeded error</code>是<code>java.lang.OutOfMemoryError</code>家族的一员，并且很明显地它表示了资源（内存）消耗殆尽。<br>在下面的文章中，我们将会寻找是什么原因导致了<code>java.lang.OutOfMemoryError: GC Overhead Limit Exceeded error</code>并且如何解决它们。  </li>
+<li>GC Overhead Limit Exceeded Error<br><code>OutOfMemoryError</code>是<code>java.lang.VirtualMachineError</code>的子类，当JVM遇到与资源利用有关的问题时，就会抛出这个异常。更确切的说，<strong>当JVM花费了太多时间执行垃圾收集时，这个错误就会发生</strong>并且它回收的堆内存很少。<br>按照Java文档的说法，默认情况下，JVM配置如果java进程花费超过98%的时间来做GC但是每次只能回收2%不到的堆内存，那么这个错误就会被抛出。换句话说，这意味着我们的应用程序用尽了几乎所有可用的内存，垃圾收集器花费了太多的时间来清理它，并且多次失败了。<br>在这种情况下，用户就会感觉到应用程序特别慢。某些通常亿毫秒为单位完成的操作，此时也需要更长的时间才能完成了。这是因为CPU正在使用它全部的能力在垃圾收集器上，因此不能够执行其他的任务了。  </li>
+<li>错误的场景<br>让我们来看一段运行代码能够抛出’java.lang.OutOfMemoryError: GC Overhead Limit Exceeded.’例如，我们可以完成这段代码，添加key-value的对到一个无结束的循环中。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class OutOfMemoryGCLimitExceed &#123;</span><br><span class="line">    public static void addRandomDataToMap() &#123;</span><br><span class="line">        Map&lt;Integer, String&gt; dataMap = new HashMap&lt;&gt;();</span><br><span class="line">        Random r = new Random();</span><br><span class="line">        while (true) &#123;</span><br><span class="line">            dataMap.put(r.nextInt(), String.valueOf(r.nextInt()));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-        
+</li>
+</ol>
+<p>当方法被执行时，带有JVM参数：<code>-Xmx100m -XX:+UseParallelGC</code>（堆内存设置为100MB并且GC算法采取ParallelGC）我们能够得到错误<code>java.lang.OutOfMemoryError: GC Overhead Limit Exceeded error</code>，为了能够更好的理解不同的垃圾收集器算法，我们可以查看Oracle的文档<a href="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html" target="_blank" rel="noopener">Java Garbage Collection Basics</a><br>我们也可以快速运行以下的命令在项目根路径得到异常<code>java.lang.OutOfMemoryError: GC Overhead Limit Exceeded error</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn exec:exec</span><br></pre></td></tr></table></figure>
 
-        
+<p>还需要注意点的是，在某些场景下，我们可能在<code>GC Overhead Limit Exceeded</code>错误之前遇到<code>heap space error</code>  </p>
+<ol start="4">
+<li>解决GC Overhead Limit Exceeded Error<br>去解决这个应用程序根本的问题是去检查引起任何内存泄漏的代码。<br>以下的问题需要去处理：</li>
+</ol>
+<ul>
+<li>程序中哪个对象占据这大量的堆内存空间？</li>
+<li>那一部分代码是分配这些对象的？<br>我们也可以使用自动化的图形工具例如<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank" rel="noopener">JConsole</a>来检测袋中包含<code>java.lang.OutOfMemoryErrors</code>的性能问题。<br>最后的办法是通过改变JVM的启动配置来增加堆的大小。例如为这个应用程序分配1G的堆内存空间。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1024m com.xyz.TheClassName</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Permgen space/" itemprop="url">
-            
-              <span itemprop="name">OOM-Permgen space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:52:01+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+</li>
+</ul>
+<p>然后，如果应用程序代码中真正存在内存泄漏，这种方法将不会解决问题。相反，我们将会延期这个错误。因此，更可取的是要彻底重新评估应用程序的内存使用。  </p>
+<ol start="5">
+<li>结论<br>在这个指导中，我们已经明确了<code>java.lang.OutOfMemoryError: GC Overhead Limit Exceeded</code>异常，并且知道了它背后的原因。<br>一如既往，可以找到与本文相关的源代码(Over on GitHub)[<a href="https://github.com/eugenp/tutorials/tree/master/core-java]" target="_blank" rel="noopener">https://github.com/eugenp/tutorials/tree/master/core-java]</a></li>
+</ol>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Out of swap space/" itemprop="url">
-            
-              <span itemprop="name">OOM-Out of swap space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:50:41+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-new native thread/" itemprop="url">
-            
-              <span itemprop="name">OOM-new native thread</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:49:14+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-All/" itemprop="url">
-            
-              <span itemprop="name">OOM-All</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:47:48+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Metaspace/" itemprop="url">
-            
-              <span itemprop="name">OOM-Metaspace</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:45:30+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-Kill process/" itemprop="url">
-            
-              <span itemprop="name">OOM-Kill process</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:08:33+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-heap space/" itemprop="url">
-            
-              <span itemprop="name">OOM-heap space</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T20:03:36+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/OOM-GC overhead/" itemprop="url">
-            
-              <span itemprop="name">OOM-GC overhead</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T19:46:46+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/15/Hexo计划/" itemprop="url">
-            
-              <span itemprop="name">Hexo计划</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-15T19:30:44+00:00" content="2019-07-15">
-          07-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/01/hello-world/" itemprop="url">
-            
-              <span itemprop="name">hello-world</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-01T13:53:34+00:00" content="2019-07-01">
-          07-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/OOM/" rel="tag"># OOM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/15/OOM-Requested array siz/" rel="next" title="OOM-Requested array siz">
+                <i class="fa fa-chevron-left"></i> OOM-Requested array siz
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -854,8 +618,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -937,6 +710,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1082,6 +872,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1095,6 +889,8 @@
 
   
 
+
+  
 
 
   
