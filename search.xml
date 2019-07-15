@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[JavaContent]]></title>
+    <url>%2F2019%2F07%2F15%2FJavaContent%2F</url>
+    <content type="text"><![CDATA[this a java files.]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019文章]]></title>
+    <url>%2F2019%2F07%2F14%2F2019%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[title 2019this is a 2019 files. TODOwe can do it more.go go go.]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hello-world]]></title>
+    <url>%2F2019%2F07%2F01%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+</search>
