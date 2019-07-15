@@ -5,7 +5,7 @@
 # Site
 title: 火中取蛋壳
 subtitle: run stop run stop, go go go.
-description: 个人技术博客，对于一些东西进行总结整理。
+description: 个人技术博客，对于一些东西进行总结归纳整理。
 keywords: Java
 author: lml2014
 language: zh-CN
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:

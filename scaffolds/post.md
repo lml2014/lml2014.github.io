@@ -2,6 +2,6 @@
 title: {{ title }}
 permalink: {{ title }}
 date: {{ date }}
-categories: 
+categories: []
 tags: []
 ---
