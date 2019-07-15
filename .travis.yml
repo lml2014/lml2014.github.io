@@ -24,13 +24,13 @@ before_install:
 
 install:
     - npm install
+    - npm install hexo-generator-searchdb --save
   # - npm install hexo-generator-feed --save
   # - npm install hexo-deployer-git --save
   # - npm install hexo-renderer-ejs --save
   # - npm install hexo-renderer-stylus --save
   # - npm install hexo-renderer-marked --save
   # - npm install hexo-renderer-sass --save
-  # - npm install hexo-generator-searchdb --save
 
 script:
     - hexo clean
