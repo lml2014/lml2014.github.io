@@ -136,7 +136,7 @@
     <url>%2F2019%2F07%2F15%2FHexo%E8%AE%A1%E5%88%92%2F</url>
     <content type="text"><![CDATA[目前原来的文章都是直接放到git管理，采取markdown格式，没有样式存在，查看很不方便。遂决定采取hexo方式进行展示。目前来看hexo还是很好的展现方式，对于个人搭建博客，新域名方面，觉得太麻烦了，付费也是极大的问题，而CSDN等网站，商业性太夸张了，不好查看，还是放在github采取hexo方式最好了。以后有时间了，会再搭建一份采取VuePress方式进行。 主要内容平时自己积累的东西会放到record文档当中去，进行不断完善，总结。当record中的文章已经成熟了，没有问题了，会进行移动操作，将文章移动到此hexo当中去，当做稳定的归档版本来处理。后续不出问题的话，流程暂待如此处理。 后续计划闲了没事的话，会不断完善hexo相关的设置吧，对于文章方面，归类处理这些也会进行总结，尝试的。有了新的内容都会不断更新上去。SEO的优化也会后续闲了慢慢添加处理。github上写博客虽然不是很正规，但也是符合技术上面的，也可以的。github pages其他项目也是可以写的，后续会再开一个其他项目，写其他的内容。]]></content>
       <categories>
-        <category>杂谈</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -147,7 +147,7 @@
     <url>%2F2019%2F07%2F01%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
-        <category>杂谈</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
