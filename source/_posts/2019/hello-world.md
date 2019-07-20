@@ -1,7 +1,7 @@
 ---
 title: hello-world
 permalink: hello-world
-categories: [Hexo]
+categories: [杂谈]
 tags: [Hexo]
 date: 2019-07-01 13:53:34
 ---

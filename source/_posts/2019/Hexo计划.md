@@ -1,7 +1,7 @@
 ---
 title: Hexo计划
 permalink: Hexo计划
-categories: [Hexo]
+categories: [杂谈]
 tags: [Hexo]
 date: 2019-07-15 19:30:44
 ---
